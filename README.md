@@ -226,11 +226,6 @@ Collaborate, learn, and grow together through:
 | Technology           | Usage                |
 | -------------------- | -------------------- |
 | 🐍 Python            | Core Development     |
-| 🌐 Flask             | Backend Framework    |
-| 🗄️ SQLite / MongoDB | Database             |
-| 🔗 Git & GitHub      | Version Control      |
-| 🎨 HTML/CSS          | Frontend             |
-| ⚡ JavaScript         | Interactive Features |
 
 </div>
 
