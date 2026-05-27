@@ -375,8 +375,6 @@ If you like this project:
 
 Passionate Full Stack & Open Source Developer focused on:
 
-* Python Development
-* Flask Backend
 * MERN Stack
 * Open Source Contributions
 * Real-World Projects
