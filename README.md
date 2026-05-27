@@ -124,7 +124,7 @@ Good luck and enjoy the challenge.
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
-## 🌐 Connect with Me
+## 🌐 Connect with Project Admin
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a92d4e36-c38a-4af2-bbfa-aae37e35ccbf" alt="Abhisek Panda_DSC0019" height="200"/>
