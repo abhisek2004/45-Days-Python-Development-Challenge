@@ -115,9 +115,6 @@ A journey where passionate developers come together to learn, build, contribute,
 🔥 Let’s code, collaborate, and conquer Python together — one project, one challenge, and one smart commit at a time. 👨‍💻👩‍💻🚀🌟
 
 
-
-
-
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
 # 🌟 45 Days Python Development Challenge
@@ -129,7 +126,7 @@ Welcome to the **45 Days Python Development Challenge** — a complete journey f
 > 🚀 Contribute to Open Source.
 > 🏆 Grow Your Developer Portfolio.
 
----
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="150%">
 
 # 🔗 Repository Link
 
@@ -156,8 +153,59 @@ Now is the perfect time to:
 * ✅ Build your GitHub profile
 * ✅ Network with developers
 
----
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="150%">
 
+<details>
+  <summary>📘 Click to Read More </summary>
+  
+ ## 📂 Project Folder Structure
+
+```bash
+45-DAYS-PYTHON-DEVELOPMENT-CHALLENGE
+│
+├── .github
+│
+├── MAIN_CODE_PROJECT
+│   │
+│   ├── src
+│   │
+│   ├── week-1
+│   │   │
+│   │   ├── day-1
+│   │   ├── day-2
+│   │   ├── day-3
+│   │   ├── day-4
+│   │   ├── day-5
+│   │   ├── day-6
+│   │   ├── day-7
+│   │   │
+│   │   ├── week-1-challenge.md
+│   │   ├── fetch_details.py
+│   │   └── get_request.py
+│
+├── STUDY_MATERIALS_RESOURCES
+│   │
+│   ├── DAILY_TASKS
+│   ├── FLASK_GUIDES
+│   ├── PDF_NOTES
+│   ├── PROJECT_DOCUMENTATION
+│   ├── PYTHON_BASICS
+│   │   └── hello.py
+│   │
+│   └── RESOURCES
+│
+├── tests
+│
+├── .gitignore
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── environment.yml
+├── LICENSE
+├── pytest.ini
+└── README.md
+``` 
+</details>
+  
 # 🚀 What To Expect
 
 ## 01️⃣ Real Projects Drop 💻
@@ -191,9 +239,9 @@ Browse issues based on:
 
 Choose issues according to your skill level:
 
-* 🟢 Beginner Friendly
-* 🟡 Intermediate
-* 🔴 Advanced
+* 🟢 Beginner Friendly | (LEVEL 1 )
+* 🟡 Intermediate      | (LEVEL 2 ) 
+* 🔴 Advanced          | (LEVEL 3 )
 
 Contributors can:
 
