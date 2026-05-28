@@ -312,6 +312,69 @@ Collaborate, learn, and grow together through:
 
 ---
 
+# 🗺️ 45-Day Progress Tracker
+
+Track your journey! You can check off each day as you complete it by editing your fork's `README.md` or tracking it locally.
+
+### 📅 Week 1: Python Fundamentals
+- [ ] **Day 1:** Variables & Data Types
+- [ ] **Day 2:** Loops & Conditions
+- [ ] **Day 3:** Basic Functions
+- [ ] **Day 4:** Object-Oriented Programming (OOP) Concepts
+- [ ] **Day 5:** File Handling & Operations
+- [ ] **Day 6:** Exception & Error Handling
+- [ ] **Day 7:** Week 1 Review & Mini-Challenge
+
+### 📅 Week 2: Intermediate Python & Scripting
+- [ ] **Day 8:** Working with Modules & Packages
+- [ ] **Day 9:** JSON Data Handling
+- [ ] **Day 10:** Understanding and Consuming APIs
+- [ ] **Day 11:** Managing Virtual Environments
+- [ ] **Day 12:** Advanced Functions & Decorators
+- [ ] **Day 13:** Lambda Functions & Map/Filter
+- [ ] **Day 14:** Building a Calculator App Project
+
+### 📅 Week 3: Advanced Concepts & API Building
+- [ ] **Day 15:** Introduction to Web Frameworks
+- [ ] **Day 16:** Flask Framework Basics
+- [ ] **Day 17:** Designing REST APIs
+- [ ] **Day 18:** Advanced Flask Routing & Request Handling
+- [ ] **Day 19:** Building a Password Generator CLI/Web Tool
+- [ ] **Day 20:** Integrating External APIs (Weather App Project)
+- [ ] **Day 21:** Week 3 Review & Portfolio Setup
+
+### 📅 Week 4: Databases & Persistence
+- [ ] **Day 22:** Database Integration Basics (SQLite/PostgreSQL)
+- [ ] **Day 23:** Object-Relational Mapping (ORM) with SQLAlchemy
+- [ ] **Day 24:** Implementing User Authentication
+- [ ] **Day 25:** Secure Password Hashing & Sessions
+- [ ] **Day 26:** Building a Task Manager API Backend
+- [ ] **Day 27:** Testing Python Applications
+- [ ] **Day 28:** Debugging and Logging Workflows
+
+### 📅 Week 5: Practical Automation & Real-World Tools
+- [ ] **Day 29:** Writing Automation Scripts (File Organization)
+- [ ] **Day 30:** Web Scraping Basics with BeautifulSoup
+- [ ] **Day 31:** Automating Browser Tasks with Selenium
+- [ ] **Day 32:** Working with CSV, Excel, and PDF files
+- [ ] **Day 33:** Building a Real-time Chat Application Backend
+- [ ] **Day 34:** Deploying Python/Flask Apps to Production (Render/Heroku)
+- [ ] **Day 35:** Week 5 Capstone Planning
+
+### 📅 Week 6: Final Capstone Project & Open Source
+- [ ] **Day 36:** Capstone Project: Architecture & Database Design
+- [ ] **Day 37:** Capstone Project: Implementing Core Logic
+- [ ] **Day 38:** Capstone Project: API Development
+- [ ] **Day 39:** Capstone Project: Frontend Integration/UI
+- [ ] **Day 40:** Capstone Project: Testing & Bug Fixing
+- [ ] **Day 41:** Optimizing Python Code Performance
+- [ ] **Day 42:** Documenting Repositories and Writing Clean Code
+- [ ] **Day 43:** Mastering Git Workflows for Advanced Collaboration
+- [ ] **Day 44:** Reviewing Peer Pull Requests
+- [ ] **Day 45:** 🚀 Graduation Day! Final Commit Submission
+
+---
+
 # 🛠️ Tech Stack
 
 <div align="center">
