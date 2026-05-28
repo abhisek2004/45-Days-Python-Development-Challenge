@@ -429,17 +429,30 @@ If you like this project:
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
-# 👨‍💻 Maintainer
+## 🧩 Contributions
 
-## 👤 Abhisek Panda
+![Alt](https://repobeats.axiom.co/api/embed/851ffe555f955e88c86fc35dd49ee685aeb572d9.svg "Repobeats analytics image")
 
-Passionate Full Stack & Open Source Developer focused on:
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
-* MERN Stack
-* Open Source Contributions
-* Real-World Projects
+### ⭐ Stargazers
+
+<div align="center">
+  <a href="https://github.com/abhisek2004/45-Days-Python-Development-Challenge/stargazers">
+    <img src="https://reporoster.com/stars/abhisek2004/45-Days-Python-Development-Challenge?type=svg&limit=100&names=false" alt="Stargazers" />
+  </a>
+</div>
 
 ---
+
+### 🍴 Forkers
+
+<div align="center">
+  <a href="https://github.com/abhisek2004/45-Days-Python-Development-Challenge/network/members">
+    <img src="https://reporoster.com/forks/abhisek2004/45-Days-Python-Development-Challenge?type=svg&limit=100&names=false" alt="Forkers" />
+  </a>
+</div>
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
 # 📢 Final Words
 
