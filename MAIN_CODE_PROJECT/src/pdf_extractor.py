@@ -99,11 +99,7 @@ class PdfExtractorApp:
     def load_json(self, path: Path) -> Dict[str, Any]:
         if not path.exists():
             return {}
-        try:
-            return json.loads(path.read_text(encoding='utf-8'))
-        except Exception:
-            return {}
-
+        return json.loads(path.read_text(encoding='utf-8'))
     def save_text(self, name: str, content: str) -> Path:
         path = self.output_dir / name
         path.write_text(content, encoding='utf-8')
@@ -288,3 +284,13 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
