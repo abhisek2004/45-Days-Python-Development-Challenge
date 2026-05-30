@@ -1,4 +1,4 @@
-"""Design a Secure User Authentication Simulation with Username and Password Verification
+﻿"""Design a Secure User Authentication Simulation with Username and Password Verification
 
 Generated for the 45-day Python development challenge.
 """
@@ -6,7 +6,7 @@ Generated for the 45-day Python development challenge.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 import json

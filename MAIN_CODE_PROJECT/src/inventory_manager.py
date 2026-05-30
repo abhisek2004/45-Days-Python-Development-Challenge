@@ -1,4 +1,4 @@
-"""Build a Dynamic Inventory Management Utility with Quantity Tracking Features
+﻿"""Build a Dynamic Inventory Management Utility with Quantity Tracking Features
 
 Generated for the 45-day Python development challenge.
 """
@@ -6,7 +6,7 @@ Generated for the 45-day Python development challenge.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 import json

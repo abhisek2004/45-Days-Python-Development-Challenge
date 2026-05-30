@@ -1,4 +1,4 @@
-"""Create an Automated File Organization System with Category Detection Logic
+﻿"""Create an Automated File Organization System with Category Detection Logic
 
 Generated for the 45-day Python development challenge.
 """
@@ -6,7 +6,7 @@ Generated for the 45-day Python development challenge.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 import json

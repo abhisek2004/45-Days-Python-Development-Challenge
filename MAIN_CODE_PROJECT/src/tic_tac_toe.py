@@ -1,4 +1,4 @@
-"""Build an Interactive Tic Tac Toe Gaming Application with Winner Detection Logic
+﻿"""Build an Interactive Tic Tac Toe Gaming Application with Winner Detection Logic
 
 Generated for the 45-day Python development challenge.
 """
@@ -6,7 +6,7 @@ Generated for the 45-day Python development challenge.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 import json
