@@ -26,6 +26,7 @@ class PasswordStrengthAnalyzerAppState:
     errors: int = 0
 
 class PasswordStrengthAnalyzerApp:
+
     def __init__(self) -> None:
         self.state = PasswordStrengthAnalyzerAppState()
         self.output_dir = Path('outputs')
@@ -195,6 +196,7 @@ class PasswordStrengthAnalyzerApp:
             result = self.analyze(password)
             print(json.dumps(result, indent=2))
         self.display_report()
+
     def password_strength_analyzer_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for password_strength_analyzer."""
         if isinstance(value, str):

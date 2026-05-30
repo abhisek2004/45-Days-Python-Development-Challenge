@@ -30,6 +30,7 @@ class WeatherInformationAppState:
     errors: int = 0
 
 class WeatherInformationApp:
+
     def __init__(self) -> None:
         self.state = WeatherInformationAppState()
         self.output_dir = Path('outputs')
@@ -206,6 +207,7 @@ class WeatherInformationApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def weather_information_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for weather_information."""
         if isinstance(value, str):

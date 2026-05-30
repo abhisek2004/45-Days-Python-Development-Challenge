@@ -26,6 +26,7 @@ class SystemMonitorAppState:
     errors: int = 0
 
 class SystemMonitorApp:
+
     def __init__(self) -> None:
         self.state = SystemMonitorAppState()
         self.output_dir = Path('outputs')
@@ -208,6 +209,7 @@ class SystemMonitorApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def system_monitor_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for system_monitor."""
         if isinstance(value, str):

@@ -26,6 +26,7 @@ class OtpGenerationAppState:
     errors: int = 0
 
 class OtpGenerationApp:
+
     def __init__(self) -> None:
         self.state = OtpGenerationAppState()
         self.output_dir = Path('outputs')
@@ -206,6 +207,7 @@ class OtpGenerationApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def otp_generation_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for otp_generation."""
         if isinstance(value, str):

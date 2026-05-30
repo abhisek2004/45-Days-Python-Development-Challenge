@@ -26,6 +26,7 @@ class QuizPlatformAppState:
     errors: int = 0
 
 class QuizPlatformApp:
+
     def __init__(self) -> None:
         self.state = QuizPlatformAppState()
         self.output_dir = Path('outputs')
@@ -210,6 +211,7 @@ class QuizPlatformApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def quiz_platform_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for quiz_platform."""
         if isinstance(value, str):

@@ -26,6 +26,7 @@ class TaskManagementAppState:
     errors: int = 0
 
 class TaskManagementApp:
+
     def __init__(self) -> None:
         self.state = TaskManagementAppState()
         self.output_dir = Path('outputs')
@@ -188,6 +189,7 @@ class TaskManagementApp:
         self.section('Task List')
         print(self.render_table(tasks))
         self.display_report()
+
     def task_management_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for task_management."""
         if isinstance(value, str):

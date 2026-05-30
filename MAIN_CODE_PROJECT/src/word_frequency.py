@@ -26,6 +26,7 @@ class WordFrequencyAppState:
     errors: int = 0
 
 class WordFrequencyApp:
+
     def __init__(self) -> None:
         self.state = WordFrequencyAppState()
         self.output_dir = Path('outputs')
@@ -198,6 +199,7 @@ class WordFrequencyApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def word_frequency_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for word_frequency."""
         if isinstance(value, str):

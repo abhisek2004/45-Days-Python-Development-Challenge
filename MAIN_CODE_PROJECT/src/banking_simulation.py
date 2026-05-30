@@ -26,6 +26,7 @@ class BankingSimulationAppState:
     errors: int = 0
 
 class BankingSimulationApp:
+
     def __init__(self) -> None:
         self.state = BankingSimulationAppState()
         self.output_dir = Path('outputs')
@@ -209,6 +210,7 @@ class BankingSimulationApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def banking_simulation_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for banking_simulation."""
         if isinstance(value, str):

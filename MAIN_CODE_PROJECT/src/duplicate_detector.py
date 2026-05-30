@@ -26,6 +26,7 @@ class DuplicateDetectorAppState:
     errors: int = 0
 
 class DuplicateDetectorApp:
+
     def __init__(self) -> None:
         self.state = DuplicateDetectorAppState()
         self.output_dir = Path('outputs')
@@ -203,6 +204,7 @@ class DuplicateDetectorApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def duplicate_detector_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for duplicate_detector."""
         if isinstance(value, str):

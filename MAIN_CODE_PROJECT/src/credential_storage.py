@@ -26,6 +26,7 @@ class CredentialStorageAppState:
     errors: int = 0
 
 class CredentialStorageApp:
+
     def __init__(self) -> None:
         self.state = CredentialStorageAppState()
         self.output_dir = Path('outputs')
@@ -200,6 +201,7 @@ class CredentialStorageApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def credential_storage_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for credential_storage."""
         if isinstance(value, str):

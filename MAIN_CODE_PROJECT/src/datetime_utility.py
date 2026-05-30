@@ -26,6 +26,7 @@ class DatetimeUtilityAppState:
     errors: int = 0
 
 class DatetimeUtilityApp:
+
     def __init__(self) -> None:
         self.state = DatetimeUtilityAppState()
         self.output_dir = Path('outputs')
@@ -206,6 +207,7 @@ class DatetimeUtilityApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def datetime_utility_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for datetime_utility."""
         if isinstance(value, str):

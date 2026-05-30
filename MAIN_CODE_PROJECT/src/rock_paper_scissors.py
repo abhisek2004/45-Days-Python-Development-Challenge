@@ -26,6 +26,7 @@ class RockPaperScissorsAppState:
     errors: int = 0
 
 class RockPaperScissorsApp:
+
     def __init__(self) -> None:
         self.state = RockPaperScissorsAppState()
         self.output_dir = Path('outputs')
@@ -213,6 +214,7 @@ class RockPaperScissorsApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def rock_paper_scissors_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for rock_paper_scissors."""
         if isinstance(value, str):

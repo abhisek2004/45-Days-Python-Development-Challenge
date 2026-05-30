@@ -30,6 +30,7 @@ class NewsFetcherAppState:
     errors: int = 0
 
 class NewsFetcherApp:
+
     def __init__(self) -> None:
         self.state = NewsFetcherAppState()
         self.output_dir = Path('outputs')
@@ -201,6 +202,7 @@ class NewsFetcherApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def news_fetcher_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for news_fetcher."""
         if isinstance(value, str):

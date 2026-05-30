@@ -26,6 +26,7 @@ class ApiResponseParserAppState:
     errors: int = 0
 
 class ApiResponseParserApp:
+
     def __init__(self) -> None:
         self.state = ApiResponseParserAppState()
         self.output_dir = Path('outputs')
@@ -199,6 +200,7 @@ class ApiResponseParserApp:
         self.section('Parsed Data')
         print(json.dumps(parsed, indent=2))
         self.display_report()
+
     def api_response_parser_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for api_response_parser."""
         if isinstance(value, str):

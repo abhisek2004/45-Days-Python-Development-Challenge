@@ -26,6 +26,7 @@ class ProgressDashboardAppState:
     errors: int = 0
 
 class ProgressDashboardApp:
+
     def __init__(self) -> None:
         self.state = ProgressDashboardAppState()
         self.output_dir = Path('outputs')
@@ -209,6 +210,7 @@ class ProgressDashboardApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def progress_dashboard_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for progress_dashboard."""
         if isinstance(value, str):

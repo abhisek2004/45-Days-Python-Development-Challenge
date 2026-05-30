@@ -26,6 +26,7 @@ class FileReadWriteAppState:
     errors: int = 0
 
 class FileReadWriteApp:
+
     def __init__(self) -> None:
         self.state = FileReadWriteAppState()
         self.output_dir = Path('outputs')
@@ -208,6 +209,7 @@ class FileReadWriteApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def file_read_write_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for file_read_write."""
         if isinstance(value, str):

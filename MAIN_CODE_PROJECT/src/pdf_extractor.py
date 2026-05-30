@@ -26,6 +26,7 @@ class PdfExtractorAppState:
     errors: int = 0
 
 class PdfExtractorApp:
+
     def __init__(self) -> None:
         self.state = PdfExtractorAppState()
         self.output_dir = Path('outputs')
@@ -204,6 +205,7 @@ class PdfExtractorApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def pdf_extractor_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for pdf_extractor."""
         if isinstance(value, str):

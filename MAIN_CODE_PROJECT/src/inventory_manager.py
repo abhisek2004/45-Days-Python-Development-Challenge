@@ -26,6 +26,7 @@ class InventoryManagerAppState:
     errors: int = 0
 
 class InventoryManagerApp:
+
     def __init__(self) -> None:
         self.state = InventoryManagerAppState()
         self.output_dir = Path('outputs')
@@ -203,6 +204,7 @@ class InventoryManagerApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def inventory_manager_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for inventory_manager."""
         if isinstance(value, str):

@@ -26,6 +26,7 @@ class StudentInformationSystemAppState:
     errors: int = 0
 
 class StudentInformationSystemApp:
+
     def __init__(self) -> None:
         self.state = StudentInformationSystemAppState()
         self.output_dir = Path('outputs')
@@ -207,6 +208,7 @@ class StudentInformationSystemApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def student_information_system_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for student_information_system."""
         if isinstance(value, str):

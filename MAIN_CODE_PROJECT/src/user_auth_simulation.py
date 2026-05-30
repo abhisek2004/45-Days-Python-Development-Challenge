@@ -26,6 +26,7 @@ class UserAuthSimulationAppState:
     errors: int = 0
 
 class UserAuthSimulationApp:
+
     def __init__(self) -> None:
         self.state = UserAuthSimulationAppState()
         self.output_dir = Path('outputs')
@@ -197,6 +198,7 @@ class UserAuthSimulationApp:
                 locked = True
         self.record('locked', locked)
         self.display_report()
+
     def user_auth_simulation_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for user_auth_simulation."""
         if isinstance(value, str):

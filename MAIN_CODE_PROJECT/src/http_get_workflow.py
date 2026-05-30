@@ -30,6 +30,7 @@ class HttpGetWorkflowAppState:
     errors: int = 0
 
 class HttpGetWorkflowApp:
+
     def __init__(self) -> None:
         self.state = HttpGetWorkflowAppState()
         self.output_dir = Path('outputs')
@@ -215,6 +216,7 @@ class HttpGetWorkflowApp:
             self.state.errors += 1
             self.log(f'HTTP workflow failed: {exc}')
         self.display_report()
+
     def http_get_workflow_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for http_get_workflow."""
         if isinstance(value, str):

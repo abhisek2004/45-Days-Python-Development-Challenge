@@ -26,6 +26,7 @@ class EmailValidatorAppState:
     errors: int = 0
 
 class EmailValidatorApp:
+
     def __init__(self) -> None:
         self.state = EmailValidatorAppState()
         self.output_dir = Path('outputs')
@@ -207,6 +208,7 @@ class EmailValidatorApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def email_validator_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for email_validator."""
         if isinstance(value, str):

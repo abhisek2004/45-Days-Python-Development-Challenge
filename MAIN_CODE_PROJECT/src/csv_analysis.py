@@ -26,6 +26,7 @@ class CsvAnalysisAppState:
     errors: int = 0
 
 class CsvAnalysisApp:
+
     def __init__(self) -> None:
         self.state = CsvAnalysisAppState()
         self.output_dir = Path('outputs')
@@ -204,6 +205,7 @@ class CsvAnalysisApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def csv_analysis_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for csv_analysis."""
         if isinstance(value, str):

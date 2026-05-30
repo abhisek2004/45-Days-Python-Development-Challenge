@@ -26,6 +26,7 @@ class CliCalculatorAppState:
     errors: int = 0
 
 class CliCalculatorApp:
+
     def __init__(self) -> None:
         self.state = CliCalculatorAppState()
         self.output_dir = Path('outputs')
@@ -208,6 +209,7 @@ class CliCalculatorApp:
                 self.state.errors += 1
                 print(self.format_kv(item, f'error: {exc}'))
         self.display_report()
+
     def cli_calculator_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for cli_calculator."""
         if isinstance(value, str):

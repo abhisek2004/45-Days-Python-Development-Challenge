@@ -26,6 +26,7 @@ class SearchUtilityAppState:
     errors: int = 0
 
 class SearchUtilityApp:
+
     def __init__(self) -> None:
         self.state = SearchUtilityAppState()
         self.output_dir = Path('outputs')
@@ -208,6 +209,7 @@ class SearchUtilityApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def search_utility_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for search_utility."""
         if isinstance(value, str):

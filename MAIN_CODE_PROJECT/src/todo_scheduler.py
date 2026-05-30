@@ -26,6 +26,7 @@ class TodoSchedulerAppState:
     errors: int = 0
 
 class TodoSchedulerApp:
+
     def __init__(self) -> None:
         self.state = TodoSchedulerAppState()
         self.output_dir = Path('outputs')
@@ -199,6 +200,7 @@ class TodoSchedulerApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def todo_scheduler_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for todo_scheduler."""
         if isinstance(value, str):

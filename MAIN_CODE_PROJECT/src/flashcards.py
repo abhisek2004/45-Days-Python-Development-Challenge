@@ -26,6 +26,7 @@ class FlashcardsAppState:
     errors: int = 0
 
 class FlashcardsApp:
+
     def __init__(self) -> None:
         self.state = FlashcardsAppState()
         self.output_dir = Path('outputs')
@@ -208,6 +209,7 @@ class FlashcardsApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def flashcards_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for flashcards."""
         if isinstance(value, str):

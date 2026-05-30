@@ -26,6 +26,7 @@ class ExpenseTrackerAppState:
     errors: int = 0
 
 class ExpenseTrackerApp:
+
     def __init__(self) -> None:
         self.state = ExpenseTrackerAppState()
         self.output_dir = Path('outputs')
@@ -205,6 +206,7 @@ class ExpenseTrackerApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def expense_tracker_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for expense_tracker."""
         if isinstance(value, str):

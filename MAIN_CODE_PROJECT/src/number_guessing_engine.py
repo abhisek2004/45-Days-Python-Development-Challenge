@@ -26,6 +26,7 @@ class NumberGuessingEngineAppState:
     errors: int = 0
 
 class NumberGuessingEngineApp:
+
     def __init__(self) -> None:
         self.state = NumberGuessingEngineAppState()
         self.output_dir = Path('outputs')
@@ -197,6 +198,7 @@ class NumberGuessingEngineApp:
             if answer == 'correct':
                 break
         self.display_report()
+
     def number_guessing_engine_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for number_guessing_engine."""
         if isinstance(value, str):

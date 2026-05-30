@@ -26,6 +26,7 @@ class StatisticsProcessorAppState:
     errors: int = 0
 
 class StatisticsProcessorApp:
+
     def __init__(self) -> None:
         self.state = StatisticsProcessorAppState()
         self.output_dir = Path('outputs')
@@ -197,6 +198,7 @@ class StatisticsProcessorApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def statistics_processor_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for statistics_processor."""
         if isinstance(value, str):

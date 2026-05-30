@@ -26,6 +26,7 @@ class DataVisualizationAppState:
     errors: int = 0
 
 class DataVisualizationApp:
+
     def __init__(self) -> None:
         self.state = DataVisualizationAppState()
         self.output_dir = Path('outputs')
@@ -202,6 +203,7 @@ class DataVisualizationApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def data_visualization_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for data_visualization."""
         if isinstance(value, str):

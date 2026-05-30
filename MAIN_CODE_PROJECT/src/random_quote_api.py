@@ -30,6 +30,7 @@ class RandomQuoteApiAppState:
     errors: int = 0
 
 class RandomQuoteApiApp:
+
     def __init__(self) -> None:
         self.state = RandomQuoteApiAppState()
         self.output_dir = Path('outputs')
@@ -199,6 +200,7 @@ class RandomQuoteApiApp:
         self.record('result', result)
         print(json.dumps(result, indent=2))
         self.display_report()
+
     def random_quote_api_utility_1(self, value: Any) -> Any:
         """Utility routine 1 tuned for random_quote_api."""
         if isinstance(value, str):
