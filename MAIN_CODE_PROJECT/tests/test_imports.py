@@ -1,3 +1,5 @@
+﻿"""
+Basic tests to verify that core modules can be imported
 """
 Tests that verify modules import correctly and their basic business logic works
 """
@@ -37,6 +39,8 @@ class TestProjectStructure:
         project_root = Path(__file__).parent.parent
         src_dir = project_root / "MAIN_CODE_PROJECT" / "src"
         assert src_dir.exists(), f"src directory not found at {src_dir}"
+    def test_src_files_exist(self):
+        """Test that key src files exist"""
 
     def test_all_src_files_importable(self):
         project_root = Path(__file__).parent.parent
@@ -61,6 +65,11 @@ class TestProjectStructure:
                 has_app = any(name.endswith('App') for name, _ in inspect.getmembers(mod, inspect.isclass))
                 assert has_app, f"{f} has no App class"
 
+        """Test that all src files exist"""
+        project_root = Path(__file__).parent.parent
+        src_dir = project_root / "MAIN_CODE_PROJECT" / "src"
+        src_files = [f for f in src_dir.iterdir() if f.suffix == '.py' and not f.name.startswith('__')]
+        assert len(src_files) >= 50, f"Expected 50+ source files, found {len(src_files)}"
 
 class TestModuleExecution:
     def test_modules_instantiate_and_run(self):
