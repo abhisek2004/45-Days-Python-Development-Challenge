@@ -9,6 +9,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+import hashlib
 import json
 import math
 import os
@@ -172,25 +173,42 @@ class CredentialStorageApp:
 
     def demo_data(self) -> List[Dict[str, Any]]:
         return [
-            {'username': 'user1', 'plaintext_password': 'SuperSecretPassword123'},
-            {'username': 'admin', 'plaintext_password': 'admin_password_99'},
+            {'username': 'user1'},
+            {'username': 'admin'},
         ]
 
+    def hash_password(self, password: str) -> str:
+        return hashlib.sha256(password.encode('utf-8')).hexdigest()
+
+    def store_credential(self, username: str, password: str) -> Dict[str, Any]:
+        return {'username': username, 'password_hash': self.hash_password(password)}
+
+    def verify_credential(self, stored: Dict[str, Any], password: str) -> bool:
+        return stored.get('password_hash') == self.hash_password(password)
+
     def dataset(self) -> List[Dict[str, Any]]:
-        return self.demo_data()
+        return [
+            self.store_credential('user1', 'SuperSecretPassword123'),
+            self.store_credential('admin', 'admin_password_99'),
+        ]
 
     def process_dataset(self, items: List[Dict[str, Any]]) -> Dict[str, Any]:
-        import hashlib
         db_records = {}
         for cred in items:
             user = cred.get('username')
-            pwd = cred.get('plaintext_password', '')
+            hashed = cred.get('password_hash', '')
             if user:
-                hashed = hashlib.sha256(pwd.encode('utf-8')).hexdigest()
-                db_records[user] = hashed
+                db_records[user] = {'password_hash': hashed[:16] + '... (truncated)'}
+        verification_results = {}
+        test_cases = [('admin', 'admin_password_99'), ('admin', 'wrong_password')]
+        for username, pwd in test_cases:
+            stored = next((c for c in items if c.get('username') == username), None)
+            if stored:
+                verification_results[username] = self.verify_credential(stored, pwd)
         return {
             'records_created': len(db_records),
-            'database_simulation': db_records
+            'database_simulation': db_records,
+            'verification_tests': verification_results
         }
 
     def hash_password(self, password: str) -> str:
