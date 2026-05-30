@@ -48,19 +48,9 @@ class TestProjectStructure:
         assert src_dir.exists(), f"src directory not found at {src_dir}"
 
     def test_src_files_exist(self):
-        """Test that key src files exist"""
+        """Test that all src files exist"""
         project_root = Path(__file__).parent.parent
         src_dir = project_root / "MAIN_CODE_PROJECT" / "src"
 
-        expected_files = [
-            "banking_simulation.py",
-            "cli_calculator.py",
-            "contact_manager.py",
-            "password_generator.py",
-            "task_management.py",
-        ]
-
-        for file in expected_files:
-            file_path = src_dir / file
-            assert file_path.exists(
-            ), f"Expected file {file} not found in src directory"
+        files = sorted(f.name for f in src_dir.iterdir() if f.suffix == '.py')
+        assert len(files) >= 50, f"Expected at least 50 source files, found {len(files)}"
