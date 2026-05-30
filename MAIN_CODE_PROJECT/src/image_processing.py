@@ -45,7 +45,7 @@ class ImageProcessingApp:
 
     def save_json(self, name: str, payload: Dict[str, Any]) -> Path:
         path = self.output_dir / name
-        path.write_text(json.dumps(payload, indent=2, default=str), encoding='utf-8')
+        tmp = path.with_suffix(".tmp"); tmp.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8"); os.replace(tmp, path)
         return path
 
     def record(self, key: str, value: Any) -> None:
@@ -236,3 +236,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
