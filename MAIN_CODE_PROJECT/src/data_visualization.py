@@ -23,6 +23,7 @@ class DataVisualizationAppState:
     errors: int = 0
 
 class DataVisualizationApp:
+
     def __init__(self) -> None:
         self.state = DataVisualizationAppState()
         self.output_dir = Path('outputs')

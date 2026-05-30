@@ -23,6 +23,7 @@ class PdfExtractorAppState:
     errors: int = 0
 
 class PdfExtractorApp:
+
     def __init__(self) -> None:
         self.state = PdfExtractorAppState()
         self.output_dir = Path('outputs')

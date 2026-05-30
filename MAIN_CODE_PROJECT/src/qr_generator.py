@@ -23,6 +23,7 @@ class QrGeneratorAppState:
     errors: int = 0
 
 class QrGeneratorApp:
+
     def __init__(self) -> None:
         self.state = QrGeneratorAppState()
         self.output_dir = Path('outputs')
