@@ -1,4 +1,4 @@
-"""Develop a Mathematical Statistics Processing Utility with Advanced Operations Support
+﻿"""Develop a Mathematical Statistics Processing Utility with Advanced Operations Support
 
 Generated for the 45-day Python development challenge.
 """
@@ -6,7 +6,7 @@ Generated for the 45-day Python development challenge.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 import json
@@ -21,7 +21,7 @@ class StatisticsProcessorAppState:
     history: List[str] = field(default_factory=list)
     records: Dict[str, Any] = field(default_factory=dict)
     flags: Dict[str, bool] = field(default_factory=dict)
-    created_at: datetime = field(default_factory=datetime.utcnow)
+    created_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
     runs: int = 0
     errors: int = 0
 
