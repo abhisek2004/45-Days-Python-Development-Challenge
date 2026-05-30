@@ -14,10 +14,6 @@ import random
 import statistics
 import time
 
-import urllib.error
-import urllib.parse
-import urllib.request
-
 @dataclass
 class NewsFetcherAppState:
     history: List[str] = field(default_factory=list)
