@@ -64,3 +64,19 @@ class TestProjectStructure:
             file_path = src_dir / file
             assert file_path.exists(
             ), f"Expected file {file} not found in src directory"
+
+
+class TestSrcModuleImports:
+    """Test that src modules can be imported via the path configured in conftest.py"""
+
+    def test_all_src_modules_importable(self):
+        """Import every src module to validate conftest.py sys.path injection works"""
+        project_root = Path(__file__).parent.parent
+        src_dir = project_root / "MAIN_CODE_PROJECT" / "src"
+        src_files = [f.stem for f in sorted(src_dir.iterdir())
+                     if f.suffix == '.py' and not f.name.startswith('__')]
+        assert len(src_files) >= 50, f"Expected 50+ source modules, found {len(src_files)}"
+        for mod_name in src_files:
+            __import__('src.' + mod_name, fromlist=[''])
+            mod = sys.modules.get('src.' + mod_name)
+            assert mod is not None, f"Failed to import src.{mod_name}"
