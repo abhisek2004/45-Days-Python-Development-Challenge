@@ -22,6 +22,12 @@ from json_depth_guard import safe_json_loads
 from decimal_utils import Money, safe_decimal
 
 from drift_timer import DriftCorrectedTimer, Stopwatch
+<<<<<<< fix/raft-consensus
+from file_manager import FileManage
+from raft_consensus import RaftEngine, RaftNode
+from algebraic_effects import AlgebraicEffectsEngine
+ main
+=======
 
 from nat_traversal import NATTraversalManager
 
@@ -38,6 +44,7 @@ from webhook_delivery import WebhookDeliveryEngine
 from py_preprocessor import PreprocessorEngine
 
 from algebraic_effects import AlgebraicEffectsEngine
+>>>>>>> main
 
 
 @dataclass
@@ -138,11 +145,19 @@ class BaseApp(DataProvider, DataProcessor, AppRunner):
         self.output = _OutputProxy(self)
         self._tasks: Dict[str, Any] = {}
         self._next_id: int = 0
+<<<<<<< fix/raft-consensus
+        self._raft = RaftEngine()
+        self._replicator = IncrementalStateReplicator()
+        self._guard = ResourceGuard('BaseApp', self.output_dir)
+        self._effects = AlgebraicEffectsEngine()
+ main
+=======
         self._freq_est = CountMinSketchEngine()
         self._replicator = IncrementalStateReplicator()
         self._guard = ResourceGuard('BaseApp', self.output_dir)
         self._effects = AlgebraicEffectsEngine()
     main
+>>>>>>> main
 
     # ── Logging / state mutation helpers ───────────────────────────────
 
@@ -641,6 +656,39 @@ class BaseApp(DataProvider, DataProcessor, AppRunner):
         self._wal.commit_txn('main')
         self.log('Finalized successfully')
 
+<<<<<<< fix/raft-consensus
+    # ── Raft Consensus Protocol ───────────────────────────────────
+
+    def raft_create(self, node_id: str, cluster: Optional[List[str]] = None) -> RaftNode:
+        return self._raft.create(node_id, cluster)
+
+    def raft_propose(self, node_id: str, command: Any) -> bool:
+        return self._raft.propose(node_id, command)
+
+    def raft_leader(self, node_id: str) -> Optional[str]:
+        return self._raft.leader(node_id)
+
+    def raft_commit_index(self, node_id: str) -> int:
+        return self._raft.commit_index(node_id)
+
+    def raft_add_server(self, node_id: str, server_id: str) -> None:
+        self._raft.add_server(node_id, server_id)
+
+    def raft_remove_server(self, node_id: str, server_id: str) -> None:
+        self._raft.remove_server(node_id, server_id)
+
+    def raft_metrics(self, node_id: str) -> Dict[str, Any]:
+        return self._raft.raft_metrics(node_id)
+
+    def raft_summary(self) -> Dict[str, Any]:
+        return self._raft.summary()
+
+    def raft_list(self) -> List[str]:
+        return self._raft.list()
+
+    def raft_remove(self, node_id: str) -> bool:
+        return self._raft.remove(node_id)
+=======
     # ── Count-Min Sketch frequency estimation ──────────────────────────
 
     def freq_create(self, name: str = 'default', epsilon: float = 0.01,
@@ -691,6 +739,7 @@ class BaseApp(DataProvider, DataProcessor, AppRunner):
 
     def freq_remove(self, name: str) -> bool:
         return self._freq_est.remove_estimator(name)
+>>>>>>> main
     def ae_register(self, effect_type: str,
                     handler_fn: Optional[Callable[[Any], Any]] = None) -> None:
         self._effects.register_handler(effect_type, handler_fn)
@@ -723,7 +772,11 @@ class BaseApp(DataProvider, DataProcessor, AppRunner):
     def bh_execute(self, group: str, fn: Callable[..., Any],
                    *args: Any, **kwargs: Any) -> Any:
         return self._bulkhead.execute(group, fn, *args, **kwargs)
+<<<<<<< fix/raft-consensus
+ main
+=======
     main
+>>>>>>> main
 
     def bh_io(self, fn: Callable[..., Any], *args: Any, **kwargs: Any) -> Any:
         return self._bulkhead.execute_io(fn, *args, **kwargs)
